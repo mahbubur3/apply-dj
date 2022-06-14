@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <div>
+        <h2>Hi there, This is {{ name }}. I'm a {{ profession }}</h2>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, magnam. Nisi eum maxime reiciendis enim aut, consequuntur accusamus adipisci aspernatur fugiat asperiores saepe vero cupiditate qui dolorum nobis a. Autem molestiae nisi iure ipsum, illo distinctio necessitatibus velit ad eius minus corporis cum possimus eaque reiciendis eveniet expedita est? Dicta maiores neque itaque quis ad dolorem, consequuntur voluptas rem iste. Aliquam nulla enim similique culpa? Perferendis quam eligendi, facilis quaerat quod dolore eveniet dignissimos consequatur nostrum et atque iste magni recusandae totam in fugit, provident quae ex odit nobis ullam pariatur nihil doloribus? Sequi, fugiat aspernatur! Illum molestias recusandae assumenda ad voluptas ipsa tenetur vitae possimus in quod? Laborum, maiores aperiam sint repudiandae voluptate soluta id tempore corrupti neque aut, reiciendis qui nam quo minus molestiae illo, iusto consectetur debitis cum officia! Aliquam doloribus hic perferendis sint maiores cupiditate explicabo rem natus, reiciendis iure repellat provident laborum, porro, quam reprehenderit qui ullam quibusdam consequuntur! Impedit qui veniam rem quos distinctio deserunt, labore quo ratione? Aliquam adipisci minus quae beatae molestias quo quod cumque eum vel aspernatur suscipit quibusdam dolorem fugiat aut, a cupiditate ea vitae nulla, sapiente soluta. Et aperiam recusandae suscipit vero voluptatum assumenda optio ducimus necessitatibus non alias.</p>
+    </div>
+    <div>
+        <img width="50%" src="{% static 'images/img5.jpg'%}" alt="">
+    </div>
+    <div>
+        <table border="2">
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Quantity</th>
+            </tr>
+
+            {% for my_order in my_orders %}
+            <tr>
+                <td>{{ my_order.name }}</td>
+                <td>{{ my_order.price }}</td>
+                <td>{{ my_order.quantity }}</td>
+            </tr>
+
+            {% endfor %}
+            
+        </table>
+    </div>
+</body>
+</html>

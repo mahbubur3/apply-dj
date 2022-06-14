@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahbub's Book Shelf</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <div>
+        <h2>Hey, This is {{ name }} Book Shelf. <br> Find your book what you read..!</h2>
+    </div>
+    <div>
+        <table border="1">
+            <tr> 
+                <th>Book Name</th>
+                <th>Author</th>
+                <th>Publish Year</th>
+                <th>Pages</th>
+                <th>Price</th>
+            </tr>
+
+            {% for book in my_books %}
+ 
+            <tr>
+                <td>{{ book.name }}</td>
+                <td>{{ book.author }}</td>
+                <td>{{ book.publish_year }}</td>
+                <td>{{ book.pages }}</td>
+                <td>{{ book.price }}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </div>
+</body>
+</html>

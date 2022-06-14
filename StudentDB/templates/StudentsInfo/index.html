@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Data</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <h1>{{ university_name }}</h1>
+    <h2>Students information for game.</h2>
+    <table border = "1">
+        <tr>
+            <th>Name</th>
+            <th>ID No.</th>
+            <th>Department</th>
+            <th>Participate</th>
+        </tr>
+
+        {% for student in students %}
+
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.id_number }}</td>
+            <td>{{ student.department }}</td>
+            <td>{{ student.participate }}</td>
+        </tr>
+
+        {% endfor %}
+    </table>
+    <div>
+        <img width="50%" src="{% static 'images/img.jpg'%}" alt="Universtiy of Toronto">
+    </div>
+</body>
+</html>

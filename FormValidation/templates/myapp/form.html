@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YOUR FORM</title>
+</head>
+<body>
+    <div>
+        <h1 id="my-style">{{ heading }}</h1>
+        <form action="" method="POST">
+        {{ form.as_p }}
+        {% csrf_token %}
+        <input id="btn-style" type="submit" name="submit" value="Submit">
+    </form>
+    </div> 
+    <div>
+        {% if submited %}
+
+        <p>{{ field }}</p>
+        {% comment %} <p>{{ number_field}}</p> {% endcomment %}
+
+        {% endif %}
+    </div>
+</body>
+</html>

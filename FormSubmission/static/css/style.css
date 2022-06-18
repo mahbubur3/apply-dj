@@ -1,0 +1,16 @@
+#my-style {
+    background-color: cadetblue;
+    color: white;
+    padding-left: 5px;
+}
+
+#btn-style {
+    background-color: cadetblue;
+    color: white;
+    border: none;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+}

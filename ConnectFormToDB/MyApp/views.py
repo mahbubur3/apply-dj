@@ -4,10 +4,10 @@ from MyApp import forms
 from MyApp.models import Book
 
 
-def home(request):
+def index(request):
     books = Book.objects.order_by('book_name')
     data = {'books': books}
-    return render(request, 'myapp/index.html', context=data)
+    return render(request, 'MyApp/index.html', context=data)
 
 
 def form(request):
@@ -18,11 +18,11 @@ def form(request):
 
         if new_form.is_valid():
             new_form.save(commit=True)
-            return home(request)
+            return index(request)
 
     data = {
         'form': new_form,
         'heading': 'Add a new book.'
     }
 
-    return render(request, 'myapp/form.html', context=data)
+    return render(request, 'MyApp/form.html', context=data)

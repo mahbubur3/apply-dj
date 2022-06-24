@@ -1,0 +1,13 @@
+{% extends 'my_app/base.html' %}
+{% block body_block %}
+<h2>List of Actors</h2>
+<ul>
+    {% if actors %}
+    {% for actor in actors %}
+    <li><a href="{% url 'your_app:movie_list' actor_id=actor.id %}">{{ actor.name }}</a></li>
+    {% endfor %}
+    {% else %}
+    <h4>Empty list.</h4>
+    {% endif %}
+</ul>
+{% endblock body_block %}

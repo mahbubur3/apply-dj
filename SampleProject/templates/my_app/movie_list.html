@@ -1,0 +1,22 @@
+{% extends 'my_app/base.html' %}
+{% block body_block %}
+<h5>Actor: {{ actor_info.name }}</h5>
+<h5>Nationality: {{ actor_info.nationality }}</h5>
+<h5>Rating: {{ actor_rating }}</h5>
+<hr>
+<h2>list of movies</h2>
+<table class="table w-50 table-bordered">
+    <tr>
+        <th>Movie</th>
+        <th>Release Date</th>
+        <th>Rating</th>
+    </tr>
+    {% for movie in movie_list %}
+    <tr>
+        <td>{{ movie.movie_name }}</td>
+        <td>{{ movie.release_date|date:"M d, Y" }}</td>
+        <td>{{ movie.rating_star }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock body_block %}

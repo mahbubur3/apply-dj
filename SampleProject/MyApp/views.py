@@ -57,3 +57,10 @@ def add_movie_form(request):
         'movie_form': form,
     }
     return render(request, 'my_app/add_movie.html', context=data)
+
+
+def edit_actor(request, actor_id):
+    actor_info = Actor.objects.get(pk=actor_id)
+    form = forms.ActorForm(instance=actor_info)
+    data = {'edit_form': form}
+    return render(request, 'my_app/edit_actor.html', context=data)

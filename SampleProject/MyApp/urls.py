@@ -8,4 +8,5 @@ urlpatterns = [
     path('addmovie/', views.add_movie_form, name="add_movie_form"),
     path('addactor/', views.add_actor_form, name="add_actor_form"),
     path('movielist/<int:actor_id>/', views.movie_list, name="movie_list"),
+    path('editactor/<int:actor_id>/', views.edit_actor, name="edit_actor"),
 ]

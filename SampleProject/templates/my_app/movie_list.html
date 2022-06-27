@@ -2,6 +2,7 @@
 {% block body_block %}
 <h5>Actor: {{ actor_info.name }}</h5>
 <h5>Nationality: {{ actor_info.nationality }}</h5>
+<a href="{% url 'your_app:edit_actor' actor_id=actor_info.id %}" class="btn btn-danger btn-sm">Edit</a>
 <hr>
 <h2>list of movies</h2>
 <table class="table w-50 table-bordered">

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>your all project here</h1>
+
+<h2>this is {{ page }} page. this page showing all the projects</h2>
+
+<ul>
+    {% for project in projects %}
+        <li><a href="{% url 'project' project.id %}">{{ project.title }}</a> -- {{ project.description }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
